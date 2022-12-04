@@ -8,10 +8,15 @@ A bunch of exemples using Jest and Testing Library
   * [Title Exemple](./src/components/atoms/Title/Title.spec.tsx)
   * [Button Exemple](./src/components/atoms/Button/Button.spec.tsx)
   * [Input Exemple](./src/components/atoms/Input/Input.spec.tsx)
-* [User Event](./src/components/atoms/Title/index.tsx)
-* [Mocks](./src/components/atoms/Title/index.tsx)
-* [Async](./src/components/atoms/Title/index.tsx)
-* [Regular Functions](./src/components/atoms/Title/index.tsx)
+* User Event
+  * [Form Exemple](./src/components/molecules/Form/Form.spec.tsx)
+* Mocks
+  * [Libraries]()
+  * [Consuming API]()
+* Async
+  * [API]()
+* Regular Functions
+  * [Utils](./src/utils/parseCookies.spec.ts)
 
 ## Jest CLI Flags
 * `yarn jest --watch`
