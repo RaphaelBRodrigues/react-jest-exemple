@@ -5,8 +5,8 @@ A bunch of exemples using Jest and Testing Library
 
 ## Exemples
 * Basic Test
-  * [Title Exemple](./src/components/atoms/Title/index.tsx)
-  * [Button Exemple](./src/components/atoms/Title/index.tsx)
+  * [Title Exemple](./src/components/atoms/Title/Title.spec.tsx)
+  * [Button Exemple](./src/components/atoms/Button/Button.spec.tsx)
 * [User Event](./src/components/atoms/Title/index.tsx)
 * [Mocks](./src/components/atoms/Title/index.tsx)
 
