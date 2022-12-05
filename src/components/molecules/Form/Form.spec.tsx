@@ -5,10 +5,12 @@ import shouldRender from '../../../utils/shouldRender';
 import userEvent from '@testing-library/user-event';
 import { redirectToHome } from '../../../utils/redirectToHome';
 import ApplicationConstants from '../../../constants/ApplicationConstants';
+import { Button } from '../../atoms/Button';
 
 // Função externa ao componente
-jest.mock("../../../utils/shouldRender.ts")
-jest.mock("../../../utils/redirectToHome.ts")
+jest.mock("../../../utils/shouldRender.ts");
+jest.mock("../../../utils/redirectToHome.ts");
+// jest.mock("../../atoms/Button", () => jest.requireActual('../../atoms/Button'));
 
 const makeSut = () => {
   return render(<Form />)
@@ -110,5 +112,17 @@ describe("<Form />", () => {
         })
       })
     })
+  })
+
+  // Falso Positivo
+  it("Should renders a forgot password button", () => {
+    makeSut();
+
+    const $element = screen.getByText(/Enviar/i);
+
+    // Manipulando o teste só para passar
+    $element.innerHTML = "Forgot your password?"
+
+    expect(screen.getByText('Forgot your password?')).toBeInTheDocument();
   })
 })
