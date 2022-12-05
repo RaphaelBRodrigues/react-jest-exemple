@@ -6,6 +6,6 @@ describe("<App />", () => {
   it('Should renders a test label', () => {
     render(<App />);
 
-    expect(screen.getByText(/teste/i)).toBeInTheDocument();
+    expect(screen.getByText(/jest/i)).toBeInTheDocument();
   });
 })

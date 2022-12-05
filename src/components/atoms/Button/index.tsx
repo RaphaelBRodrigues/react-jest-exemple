@@ -2,7 +2,7 @@ import * as React from 'react';
 
 type Props = {
   label: string,
-  callback: () => void,
+  callback?: () => void,
 };
 
 export const Button: React.FC<Props> = ({

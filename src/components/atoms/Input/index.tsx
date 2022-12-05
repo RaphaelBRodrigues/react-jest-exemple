@@ -1,16 +1,21 @@
 import * as React from 'react';
 
 type Props = {
-  disabled?: boolean
+  disabled?: boolean,
+  placeholder: string,
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 export const Input: React.FC<Props> = ({
-  disabled
+  disabled,
+  placeholder,
+  onChange = () => { }
 }) => {
   return (
     <input
+      onChange={onChange}
       disabled={disabled}
-      placeholder="Username"
+      placeholder={placeholder}
       style={{
         backgroundColor: disabled ? 'gray' : 'white'
       }}

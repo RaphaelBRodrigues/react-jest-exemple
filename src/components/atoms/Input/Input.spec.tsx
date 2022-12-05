@@ -1,13 +1,12 @@
 /* eslint-disable testing-library/no-debugging-utils */
 import { render, screen } from '@testing-library/react';
-import { debug } from 'console';
 import React from 'react';
 import { Input } from '.';
 
 const makeSut = ({
   disabled = false
 }) => {
-  return render(<Input disabled={disabled} />)
+  return render(<Input placeholder="Username" disabled={disabled} />)
 }
 
 describe("<Input />", () => {
@@ -59,5 +58,10 @@ describe("<Input />", () => {
     expect($element).toHaveStyle({
       backgroundColor: 'white'
     })
+  })
+
+  // Ignora o teste
+  it.skip("Should do anything that does not matter", () => {
+    expect(true).toBeFalsy();
   })
 })
